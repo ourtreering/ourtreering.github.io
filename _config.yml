@@ -1,4 +1,6 @@
 # Build settings
+remote_theme: dirkfabisch/mediator
+
 gems:
   - jemoji
   - jekyll-paginate
@@ -20,13 +22,12 @@ name: '박은혜, 정소연, 조현우, 최중현'
 author: '박은혜, 정소연, 조현우, 최중현'
 author_image: "/assets/images/author.jpg"
 
-paginate:	5
-
-remote_theme: dirkfabisch/mediator
-
 url: "https://ourtreering.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-#used to display twitter cards
+
+paginate:	5
+
+#used to display twitter cards\
 twitter_handle: '@dirkfabisch'
 
 #fill in disqus shortname to use disqus
