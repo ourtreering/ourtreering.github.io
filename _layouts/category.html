@@ -6,12 +6,14 @@ layout: default
 
 <header class="blog-header">
   {% if site.logo %}
-    <a class="blog-logo" href="{{site.url}}{{site.baseurl}}" style="background-image: url('{{ site.logo | prepend: site.baseurl }}')">{{ page.title }}</a>
+  <a class="blog-logo" href="{{site.url}}{{site.baseurl}}" style="background-image: url('{{ site.logo | prepend: site.baseurl }}')">{{ page.title }}</a>
   {% endif %}
   <h1 class="blog-title">{{ page.title }}</h1>
   <h2 class="blog-description">{{ page.description }}</h2>
-
+  
 </header>
+
+{% include site_category.html %}
 
 <main class="content" role="main">
 

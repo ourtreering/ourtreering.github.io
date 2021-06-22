@@ -619,3 +619,25 @@ pre
     border: 0
     padding-right: 0
     padding-left: 0
+
+.site-category
+  width: 100%
+  max-width: 640px
+  margin: 0 auto
+  position: relative
+  padding: 0
+  @include box-sizing(border-box)
+  @include respond-to(800)
+    padding: 0 $rs
+  
+  .custom-links
+    margin: 0 0 10px
+    text-align: center
+    color: #ccc
+    a
+      margin: 0 40px 0
+      text-decoration: none
+      color: #999
+      font-size: 20px
+      &:hover
+        color: #333
