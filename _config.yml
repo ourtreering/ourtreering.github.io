@@ -16,6 +16,7 @@ float_logo: true # true, false (default)
 # blog cover
 cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
 
+# 추후 삭제할 것!
 name: 'Dirk Fabisch'
 author: 'Dirk Fabisch'
 author_image: "/assets/images/author.jpg"
@@ -25,7 +26,7 @@ paginate:	5
 url: "http://ourtreering.github.io" # the base hostname & protocol for your site
 baseurl: ""
 #used to display twitter cards
-twitter_handle: '@dirkfabisch'
+# twitter_handle: '@dirkfabisch'
 
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
@@ -33,7 +34,7 @@ twitter_handle: '@dirkfabisch'
 #google_analytics: UA-XXXXX-X
 
 # social icons and sharing options
-social:
+# social:
   # - icon:	twitter
   #   url:	https://twitter.com/dirkfabisch
   #   desc: Follow me on twitter
