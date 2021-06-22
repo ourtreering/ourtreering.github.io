@@ -34,7 +34,7 @@ baseurl: ""
 #google_analytics: UA-XXXXX-X
 
 # social icons and sharing options
-# social:
+social:
   # - icon:	twitter
   #   url:	https://twitter.com/dirkfabisch
   #   desc: Follow me on twitter
