@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% include teaser_image.html %}
+
+<header class="blog-header">
+  {% if site.logo %}
+    <a class="blog-logo" href="{{site.url}}{{site.baseurl}}" style="background-image: url('{{ site.logo | prepend: site.baseurl }}')">{{ page.title }}</a>
+  {% endif %}
+  <h1 class="blog-title">{{ page.title }}</h1>
+  <h2 class="blog-description">{{ page.description }}</h2>
+
+</header>
+
+<main class="content" role="main">
+
+  <div class="cf frame">
+  
+    {% assign category = page.category | default: page.title %}
+    {% for post in site.categories[category] %}
+      <!-- <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+          <small>{{ post.date | date_to_string }}</small>
+        </h3>
+      </li> -->
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+  <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+          </div>
+        </div>
+      </article>
+      
+    {% endfor %}
+  
+  </div>
+
+</main>
