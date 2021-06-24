@@ -9,8 +9,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    bourbon (7.0.0)
-      thor (~> 1.0)
+    backports (3.21.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -19,7 +18,7 @@ GEM
     commonmarker (0.17.13)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.9)
-    dnsruby (1.61.6)
+    dnsruby (1.61.7)
       simpleidn (~> 0.1)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
@@ -113,6 +112,10 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-admin (0.11.0)
+      jekyll (>= 3.7, < 5.0)
+      sinatra (~> 1.4)
+      sinatra-contrib (~> 1.4)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.1.1)
@@ -220,9 +223,8 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.4)
+    multi_json (1.15.0)
     multipart-post (2.1.1)
-    nokogiri (1.11.7-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -232,6 +234,11 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
     racc (1.5.2)
+    rack (1.6.13)
+    rack-protection (1.5.5)
+      rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -252,10 +259,21 @@ GEM
       faraday (> 0.8, < 2.0)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-contrib (1.4.7)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (>= 1.3, < 3)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    thor (1.1.0)
     thread_safe (0.3.6)
+    tilt (2.0.10)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.9)
@@ -267,13 +285,18 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  universal-darwin-20
   x86_64-linux-musl
 
 DEPENDENCIES
-  bourbon
   github-pages
+  jekyll-admin
+  jekyll-feed (~> 0.12)
+  jekyll-sitemap
   jemoji
+  minima (~> 2.5)
+  tzinfo (~> 1.2)
+  tzinfo-data
+  wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.2.20
+   2.2.2

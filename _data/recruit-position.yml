@@ -1,0 +1,160 @@
+- name: "[경력] 백엔드 서버 개발자"
+  title: 올리브영 온라인몰 개발을 함께하실 백엔드 서버 개발자를 모십니다!
+  overview:
+    - 올리브영 온라인몰 Back-end 서버에 대한 설계 및 구현
+    - O2O서비스에 대한 Back-end 시스템 구현
+    - 대용량/실시간 트래픽 대비 서비스 성능 측정/분석 및 최적화
+  requirement:
+    - 관련 경력 3년 이상
+    - Java, Spring Framework 기반 웹 서비스에 대한 이해 및 실무 개발 경험
+    - 분산 환경의 대규모 데이터 처리를 위한 데이터 프로세싱에 대한 이해 및 경험
+    - 기술적인 문제에 대한 정확한 파악/분석 및 해결 역량
+    - 신기술 도입에 대한 적극적인 마인드와 태도 보유
+  useful:
+    - MongoDB/Redis 등 NoSQL 관련 구축/운영 경험
+    - 이커머스 플랫폼 관련 실무 경험
+    - AWS, GCP 등 DevOps환경 기반 클라우드 인프라 경험
+    - TDD/Agile 개발환경에 대한 실무 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] 프론트엔드 개발자"
+  title: 올리브영 온라인몰 개발을 함께하실 프론트엔드 개발자를 모십니다!
+  overview:
+    - 고객 경험 기반의 신규/기술 개선 프로젝트 수행
+    - 올리브영 플랫폼에 필요한 신규 기술 적용
+    - 이커머스 서비스 개발
+    - UI 설계 및 개발
+  requirement:
+    - 관련 경력 3년 이상
+    - JavaScript 및 React와 같은 Front-end Framework 이해 및 개발 경험
+    - 모바일 웹 및 Single page Application에 대한 관심 및 프로젝트 경험
+    - 우수한 커뮤니케이션 스킬과 협업 자세 보유
+  useful:
+    - 컴퓨터공학 관련 학위 소지자
+    - Typescript, React.js, Node.js를 활용한 프로젝트 경험
+    - 대규모 서비스 개발 프로젝트에서 Front-end 성능 최적화 경험
+    - 이커머스 또는 패션/뷰티 관련 도메인에서 모바일 서비스 프로젝트 참여 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] DBA"
+  title: 올리브영의 데이터베이스를 운영/관리할 DBA를 모십니다!
+  overview:
+    - 데이터베이스 엔지니어링 및 운영 업무 수행 (오라클/MySQL)
+    - 데이터 구조화 및 테이블 설계 검토 및 표준화
+    - SQL 최적화, 사전 검수 및 인덱스 설계
+  requirement:
+    - 관련 경력 3년 이상
+    - Oracle, MYSQL 등 RBMS에 대한 이해 및 운영 가능자 (백업/복구, 트러블슈팅 등)
+    - SQL, 인덱스 튜닝에 대한 기본적인 지식 및 경험
+    - 우수한 커뮤니케이션 스킬과 협업 자세 보유
+    - 신속한 문제 파악/분석 및 해결 역량
+  useful:
+    - Cloud(AWS/GCP/Azure 등)환경 내 DBMS 운영 관리 경험
+    - 스크립트 개발 역량(Shell, python 등) 보유
+    - 이커머스 환경에서 대용량 트래픽에 대한 성능개선 경험
+    - Redis, MongoDB와 같은 NoSQL 경험 또는 관심
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] 퍼블리셔"
+  title: 올리브영의 온라인몰 개발 마크업을 담당하실 퍼블리셔를 모십니다!
+  overview:
+    - 올리브영 온라인몰 플랫폼 및 다양한 신규 서비스 관련 웹 표준 Markup UI 개발
+    - 사내 시스템, 서비스 운영 관련한 UI 개발
+    - Markup 산출물의 관리체계 구축 및 관리
+    - 웹 사이트 최적화에 대한 고민과 개선안 제안
+  requirement:
+    - 관련 경력 3년 이상
+    - HTML, CSS 등 W3C 웹표준에 대한 이해
+    - 웹 접근성, 반응형 웹과 모바일 환경, 크로스브라우저에 대한 이해와 경험
+    - 우수한 커뮤니케이션 스킬과 협업 자세 보유
+    - 신기술 도입에 대한 적극적인 마인드와 태도 보유
+  useful:
+    - React.js/Vue와 같은 Front-end Framework 환경 경험
+    - SMACSS, BEM과 같은 방법론을 활용한 CSS 개발 경험
+    - 이커머스 또는 패션/뷰티 관련 서비스 개발 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] iOS 앱 개발자"
+  title: 올리브영 모바일 앱 개발을 함께하실 iOS 개발자를 모십니다!
+  overview:
+    - 올리브영 iOS 모바일 앱 설계 및 개발
+    - 기본 서비스 혹은 신규 서비스들의 Native 앱 설계 및 구축
+    - iOS/모바일 개발 기술 트렌드 이해 및 조직 내 전파
+  requirement:
+    - 관련 경력 3년 이상
+    - Swift/Objective-C 기본에 대한 이해 보유
+    - iOS 클라이언트 개발 철학에 대한 이해 및 관심 보유
+    - 우수한 커뮤니케이션 스킬과 협업 자세 보유
+    - 문제 해결 의지와 책임감 보유
+  useful:
+    - UI 테스트 자동화에 대한 경험 및 관심 보유
+    - 이커머스 또는 패션/뷰티 관련 도메인에서 모바일 서비스 프로젝트 참여 경험
+    - 모바일 앱 서비스 퍼블리싱 및 론칭 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] Android 앱 개발자"
+  title: 올리브영 모바일 앱 개발을 함께하실 Android 개발자를 모십니다!
+  overview:
+    - 올리브영 Android 모바일 앱 설계 및 개발
+    - 기본 서비스 혹은 신규 서비스들의 Native 앱 설계 및 구축
+    - 앱 공통 아키텍쳐 설계 및 공통 모듈 개발
+    - Android/모바일 개발 기술 트렌드 이해 및 조직 내 전파
+  requirement:
+    - 관련 경력 3년 이상
+    - Java/Kotlin 기본에 대한 이해 보유
+    - Android 클라이언트 개발 철학에 대한 이해 및 관심 보유
+    - 우수한 커뮤니케이션 스킬과 협업 자세 보유
+    - 문제 해결 의지와 책임감 보유
+  useful:
+    - MVP, MVVM 등 architecture 설계 및 개발 경험
+    - UI 테스트 자동화에 대한 경험 및 관심 보유
+    - 이커머스 또는 패션/뷰티 관련 도메인에서 모바일 서비스 프로젝트 참여 경험
+    - Android 모바일 앱 서비스 퍼블리싱 및 론칭 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] Technical Project Manager"
+  title: 올리브영 서비스개발팀과 함께하실 TPM을 모십니다!
+  overview:
+    - 프로덕트 로드맵, 디펜던시 분석, 릴리즈 등 개발 사이클에 대한 계획 및 관리
+    - 프로젝트별 가시성 확보 및 프로젝트 이슈/리스크 관리
+    - 기술적 이해도를 바탕으로 개발팀과 정확한 커뮤니케이션 및 협업, 업무 밸런싱
+    - 개발 프로세스 정립 및 개발팀 조직 문화 확립
+  requirement:
+    - 관련 경력 3년 이상
+    - Agile 및 개발 방법론, 개발 프로세스에 대한 철학과 개념 이해 보유
+    - 팀 간 협업 및 소통 능력, 문제 해결 기술, 분석 역량 보유
+    - 기술적/시스템 이해도를 바탕으로 원활한 커뮤니케이션 및 문제 해결 역량 보유
+  useful:
+    - IT 프로젝트에 참여하여 직접 개발한 경험
+    - 이커머스 혹은 IT서비스 관련 프로젝트 관리 경험
+      다양한 프로젝트 관련 협업 툴 사용 역량
+    - 에자일/스크럼 마스터로서 경험
+  url: http://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6212
+
+- name: "[경력] 인프라 엔지니어(DevOps)"
+  title: 올리브영 온라인몰 개발을 함께하실 인프라 엔지니어(DevOps)를 모십니다!
+  position:
+    - 올리브영의 DevOps 엔지니어는 800만명이 넘는 회원을 보유한 올리브영 온라인몰 대용량 트래픽을 받아 처리하고, 고객들에게 최상의 고객 경험을 안정적으로 제공할 수 있도록. 시스템 인프라를 설계 하고 운영, 모니터링하고 성능 향상 및 개선을 하는 작업을 진행합니다.
+    - 또한 고객과 파트너사들을 위한 새로운 기능의 출시 및 성공적인 운영을 위해서 운영 배포 및 인프라 아키텍처를 구성하는 역할을 합니다.
+    - 현재 On-premise 형태의 인프라를 클라우드 기반의 시스템으로 이관하는 업무도 수행합니다.
+  overview:
+    - 지속적인 서비스 성능 개선을 위한 인프라/애플리케이션 모니터링 지표 수집, 정의, 성능 추적 및 개선
+    - 시스템 변경(배포, 인프라 등) 상태 모니터링 및 문제해결
+    - 서비스 장애대응 및 등급 관리를 통하여 재발 방지 대책 준비
+    - On-premise 환경의 인프라 운영 및 클라우드 기반으로 마이그레이션
+    - 대용량 트래픽 처리를 위한 인프라/아키텍처 설계 및 구축
+    - 인프라 비용 분석 및 비용 효율화
+  requirement:
+    - 논리적이고 체계적인 문제해결 능력 및 커뮤니케이션 능력을 보유하신 분
+    - 백엔드 개발 및 인프라 엔지니어 경력 2년 이상
+    - 새로운 기술 및 트렌드를 배우고 적용하는 것을 즐기는 분
+    - AWS, GCP, Azure 중 하나 이상의 클라우드 아키텍처 구성 경험이 있으신 분
+  useful:
+    - Public Cloud (AWS, GCP, Azure 등) 경험 및 클라우드 운영/자동화에 대한 이해가 있는 분
+    - Docker, ECS, K8S 등 컨테이너 기반의 서비스 운영 경험이 있으신 분
+    - Linux 등 서버 운영체제 운영 경험이 있으신 분
+    - 동시 접속량이 많은 서비스를 위한 분산처리 아키텍처에 대한 경험이 많은 분
+    - 인프라/서비스 엔지니어링 및 장애상황 극복 경험을 갖고 계신 분
+    - Jira, Git, Slack등 협업도구와 CI/CD를 통합하여 배포시스템 구축 경험이 있으신 분
+  url: https://recruit.cj.net/recruit/ko/recruit/recruit/detail.fo?zz_jo_num=6317
+
