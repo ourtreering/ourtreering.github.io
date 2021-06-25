@@ -31,8 +31,6 @@ hash-tag: [Github_Action, K8s, Docker, CI/CD]
 
 각각의 장단점이 존재하지만, 저는 데브옵스 초보이기 때문에, 돈이 더 드는 SaaS를 사용하기로 결정했습니다. ~~(사장님 죄송해요)~~
 
-</br>
-</br>
 
 ## 배포 구현하기
 ---------------------------
@@ -65,7 +63,7 @@ GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠�
 
 이미 정의된 깃허브 액션을 사용하시면 됩니다. 
 
-```
+~~~yml
 # Set permission
 - name: Grant execute permission for gradlew
     run: chmod +x gradlew
@@ -75,7 +73,7 @@ GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠�
     run: ./gradlew copyDocument
 - name: Build with Gradle
     run: ./gradlew build
-```
+~~~
 
 저희 서비스 같은 경우, SpringBoot의 RestDocs를 사용하기 때문에, 위와 같은 Job을 추가로 작성했습니다. 간략하게 설명하자면, test를 실행하고, 실행된 test를 기반으로 생성된 RestDocs Snippets를 기반으로 Api Docs를 완성하고, 이제 이 모든것을 빌드하는 것입니다.
 
@@ -92,13 +90,13 @@ deployment.yml 파일에 정의된 이름을 사용하셔야 합니다!
 
 액션 내에 정의된 docker build를 사용하기 위해 Dockerfile을 Root Folder에 작성해봅시다.
 
-```
+~~~Dockerfile
 FROM openjdk:11-jdk
 
 ARG JAR_FILE=build/libs/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-```
+~~~
 
 정말 짧죠?? 설명하면 jar 파일로 만들어서 실행시킨다는 의미 입니다!
 
@@ -106,7 +104,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 이제 마지막입니다. 빌드한 도커 이미지를 Google Container Registry에 올렸다면, 해당 이미지를 통해 쿠버네티스 환경 구성을 위해 두 파일을 작성해야 합니다.
 
-```
+~~~yml
 # deployment.yml
 
 apiVersion: apps/v1
@@ -129,9 +127,9 @@ spec:
           resources: {}
           ports:
             - containerPort: 8080
-```
+~~~
 
-```
+~~~yaml
 # kustomization.yaml
 
 apiVersion: kustomize.config.k8s.io/v1beta1
@@ -139,7 +137,7 @@ kind: Kustomization
 
 resources:
   - deployment.yml
-```
+~~~
 
 ## 최종 모습
 ---------------------------
