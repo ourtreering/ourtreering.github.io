@@ -69,13 +69,13 @@ GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠�
 ~~~yml
 # Set permission
 - name: Grant execute permission for gradlew
-    run: chmod +x gradlew
+  run: chmod +x gradlew
 - name: Build with Gradle test
-    run: ./gradlew test 
+  run: ./gradlew test 
 - name: Run copyDocument task
-    run: ./gradlew copyDocument
+  run: ./gradlew copyDocument
 - name: Build with Gradle
-    run: ./gradlew build
+  run: ./gradlew build
 ~~~
 
 저희 서비스 같은 경우, SpringBoot의 RestDocs를 사용하기 때문에, 위와 같은 Job을 추가로 작성했습니다. 
