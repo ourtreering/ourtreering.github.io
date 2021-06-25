@@ -1,7 +1,49 @@
-<div class="about-banner">
-  <div class="content">
+<div class="text-wrapper">
+      <div class="main-title">
+        <div class="about-banner">
+          <div class="content">
 
-    <div class="overlay" style="background: url('/meta/page_bg_02.png')"></div>
+            <!--<div class="overlay" style="background: url('/meta/page_bg_02.png')"></div>-->
+          <div class="container">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="/meta/treering_banner1.png" alt="img1" style="width:100%;object-fit: fill;">
+              </div>
+
+              <div class="item">
+                <img src="/meta/treering_banner2.png" alt="img2" style="width:100%;object-fit: fill;">
+              </div>
+            
+              <div class="item">
+                <img src="/meta/treering_banner3.png" alt="img3" style="width:100%;object-fit: fill;">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">이전</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">이후</span>
+            </a>
+          </div>
+        </div>
+ </div>
+</div>
+
+{% comment %} 
     <div class="text-wrapper">
       <div class="main-title">
               <span class="no-wrap">
@@ -22,4 +64,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>  {% endcomment %}
