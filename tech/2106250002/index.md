@@ -11,9 +11,11 @@ header-img: img/header.JPG
 hash-tag: [Github_Action, K8s, Docker, CI/CD]
 ---
 
+안녕하세요. 26층 개발자들의 리드 낭만개발자 조현우입니다. 오늘은 실록 서비스를 개발하는 과정 중에서 효율적인 CI/CD를 구축하기 위해 삽질한 과정을 설명드리도록 하겠습니다. 처음이라 많이 모자라니 많은 피드백 부탁드립니다.
+
 # 배포 전략 세우기
 
-서비스를 운영하면서 어떻게 배포 전략을 세울지 고민을 해보았습니다. 그렇게 떠오르는 방안으론 두 가지가 있었습니다.
+효율적으로 어떻게 배포 전략을 세울지 고민을 해보았습니다. 그렇게 떠오르는 방안으론 두 가지가 있었습니다.
 
 1. 젠킨스를 사용하여 배포하기
 2. 떠오르는 샛별! 깃허브 액션으로 배포하기
@@ -22,7 +24,7 @@ hash-tag: [Github_Action, K8s, Docker, CI/CD]
 
 <img src="img/trials.JPG" style="zoom: 70%; display: center;">
 
-~~수없이 실패한 깃허브 액션~~
+~~미리보는 삽질의 노고~~
 
 ## 배포 방법 정하기
 -------------------------
@@ -43,13 +45,14 @@ hash-tag: [Github_Action, K8s, Docker, CI/CD]
 3. 액션과 관련된 secret 설정
 4. Dockerfile 작성
 5. deployment.yml, kustomization.yml 
+6. 앱 노출하기
 
 ### 1. GKE 생성
 
 GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠습니다.
 중요한 건 container registry를 활성화하는 것입니다. [시작하기](https://cloud.google.com/container-registry/docs/quickstart)
 
-구글에서 친절하게 문서를 제공하니 찬찬히 따라보고 오세요!
+구글에서 친절하게 문서를 제공하니 찬찬히 따라해보고 오세요!
 
 ### 2. 깃허브 액션 작성
 
@@ -75,11 +78,12 @@ GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠�
     run: ./gradlew build
 ~~~
 
-저희 서비스 같은 경우, SpringBoot의 RestDocs를 사용하기 때문에, 위와 같은 Job을 추가로 작성했습니다. 간략하게 설명하자면, test를 실행하고, 실행된 test를 기반으로 생성된 RestDocs Snippets를 기반으로 Api Docs를 완성하고, 이제 이 모든것을 빌드하는 것입니다.
+저희 서비스 같은 경우, SpringBoot의 RestDocs를 사용하기 때문에, 위와 같은 Job을 추가로 작성했습니다. 
+RestDocs를 제대로 사용하려면, Test-Docs-Build 순서대로 진행되어야 합니다. 만약 RestDocs를 사용하고 싶다면 위의 step을 추가해주시면 됩니다. (물론 하나로 합치셔도 됩니다.)
 
 ### 3. 액션과 관련된 secret 설정
 
-깃허브 액션 내용을 살펴보면, 자세히 설명해 놓은 주석을 확인할 수 있습니다. 주석에 맞춰, 
+깃허브 액션 내용을 살펴보면, 자세히 설명해 놓은 주석을 확인하실 수 있습니다. 주석에 맞춰, 
 secret과 환경변수를 설정해주시면 됩니다. 
 
 대부분은 쉽게 검색해서 얻을 수 있는 정보지만, 이 중에서 DEPLOYMENT_NAME 같은 경우, 추후 작성할 
@@ -102,7 +106,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 ### 5. deployment.yml, kustomization.yml 
 
-이제 마지막입니다. 빌드한 도커 이미지를 Google Container Registry에 올렸다면, 해당 이미지를 통해 쿠버네티스 환경 구성을 위해 두 파일을 작성해야 합니다.
+이제 거의 다 왔습니다. 빌드한 도커 이미지를 Google Container Registry에 올렸다면, 해당 이미지를 쿠버네티스에 적용시켜야 합니다. 그러기 위해선 `deployment.yml`, `kustomization.yaml` 두 파일을 작성해야 합니다.
 
 ~~~yml
 # deployment.yml
@@ -139,6 +143,26 @@ resources:
   - deployment.yml
 ~~~
 
+`kustomization.yml`은 k8s의 오브젝트를 선언형식으로 관리한다고 생각하시면 됩니다.
+선언형 관리에 좀 더 공부하고 싶다면, `참고 사이트4`를 참고하세요!! 
+
+### 6. 앱 노출하기
+
+5번까지 설정을 완료하고 깃허브 액션을 실행하게 되면 google container registry에 해당 이미지가 올라간 것을 확인하실 수 있을 것입니다. 
+
+또한 cloud shell을 통해 `kubectl get deployments`를 입력하면 배포까지 완료된 것을 확인하실 수 있을 것입니다. 
+
+여기까지 잘 따라오셨다면 쿠버네티스 클러스터에서 앱을 실행할 수 있는 준비가 다 된 것입니다. 최종적으로 앱을 인터넷에 노출하면 완료됩니다. 외부로 노출하기 위해선 service를 생성해야 하는데, service는 파드에 접근할 수 있도록 정책을 정의하는 것이라고 생각하면 됩니다. 참고로 만약 5번에서 `kustomization.yaml` 안에 service를 정의해 놓으셨다면, service 또한 자동으로 구성될 것입니다.
+
+~~~s
+kubectl expose deployment sillock-app-depolyment --name=sillock-app-service --type=LoadBalancer --port 80 --target-port 8080
+~~~
+
+`--type=LoadBalancer`로 입력을 해야 클라우드 공급자 쪽에서 로드 밸런서를 사용하여 서비스를 외부에 노출시킵니다. 만약 클라우드를 사용하는 게 아니라면, `--type=NodePort`로 설정해주면 됩니다. NodePort를 사용할 시, 쿠버네티스 컨트롤 플레인에서 고정포트를 통해, 외부에서 서비스로 접속을 할 수 있도록 해줍니다. 
+
+
+`kubectl get service`를 통해 external Ip와 port를 통해 서비스에 접속이 가능한 것을 확인하실 수 있습니다.
+
 ## 최종 모습
 ---------------------------
 
@@ -151,12 +175,15 @@ resources:
 
 <img src="img/RestDocs.JPG" style="zoom: 50%; display: center;">
 
+(웹 상에서 확인 가능한 Rest API 문서)
+
 그래도 성공한 모습을 보니 뿌듯합니다. 
 
-이렇게 26층 개발자팀에선 배포 환경을 구축하고, 최종적으로 프론트엔드 측에게 Rest API 문서를 제공합니다.
+이렇게 실록 서비스를 담당할 CI/CD 환경을 구축해 보았습니다. 
 
 아직은 고칠 것도 많고(예를 들면, 캐시를 사용한 배포 속도 개선?), 맘에 들지 않는 모습도 많이 보이지만, 하나하나 개선해 나가는 모습 보여드리겠습니다!
 
+### 아키텍처 최종 모습
 
 <img src="img/final.JPG" style="zoom: 80%; display: center;">
 
@@ -169,3 +196,5 @@ resources:
 [참고 사이트2](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)
 
 [참고 사이트3](https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app)
+
+[참고 사이트4](https://kubernetes.io/ko/docs/tasks/manage-kubernetes-objects/kustomization/)
