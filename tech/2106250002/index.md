@@ -7,7 +7,7 @@ title: Github Action으로 자동화 배포 구현하기
 subtitle: Github Action과 K8s를 통해 CI/CD를 운영해보자!
 writer: 970421
 post-header: true
-header-img: ./img/header.jpg
+header-img: img/header.JPG
 hash-tag: [Github_Action, K8s, Docker, CI/CD]
 ---
 
@@ -20,7 +20,7 @@ hash-tag: [Github_Action, K8s, Docker, CI/CD]
 
 젠킨스를 통해 배포하는 것도 좋지만, 그보다는 도커와 쿠버네티스를 활용하여 DevOps를 운영하고 싶었습니다. 그래서 CI 툴을 고민하다 요새 다양하게 활용하는 깃허브 액션을 사용해보기로 결정하게 되었습니다.
 
-<img src="./img/trials.jpg" style="zoom: 70%; display: center;">
+<img src="img/trials.JPG" style="zoom: 70%; display: center;">
 
 ~~수없이 실패한 깃허브 액션~~
 
@@ -57,7 +57,7 @@ GKE를 생성하는 예제는 인터넷에 다양하니 넘어가도록 하겠�
 
 왜냐! 이미 구글에서 만들어서 github에 등록을 해놓았기 때문이죠.
 
-<img src="./img/github_action.jpg" style="zoom: 60%; display: center;">
+<img src="img/github_action.JPG" style="zoom: 60%; display: center;">
 
 ~~못생긴 네모..~~
 
@@ -142,14 +142,14 @@ resources:
 ## 최종 모습
 ---------------------------
 
-<img src="./img/steps.jpg" style="zoom: 80%; display: center;">
+<img src="img/steps.JPG" style="zoom: 80%; display: center;">
 
 하나하나 제대로 돌아가는 지 확인하기 위해 잘게 쪼개다 보니 이미지와 같이 엄청난 step을 수행하게 되었습니다..😂
 
 
-<img src="./img/success.jpg" style="zoom: 60%; display: center;">
+<img src="img/success.JPG" style="zoom: 60%; display: center;">
 
-<img src="./img/RestDocs.jpg" style="zoom: 50%; display: center;">
+<img src="img/RestDocs.JPG" style="zoom: 50%; display: center;">
 
 그래도 성공한 모습을 보니 뿌듯합니다. 
 
@@ -158,7 +158,7 @@ resources:
 아직은 고칠 것도 많고(예를 들면, 캐시를 사용한 배포 속도 개선?), 맘에 들지 않는 모습도 많이 보이지만, 하나하나 개선해 나가는 모습 보여드리겠습니다!
 
 
-<img src="./img/final.jpg" style="zoom: 80%; display: center;">
+<img src="img/final.JPG" style="zoom: 80%; display: center;">
 
 ## 참고 사이트
 
