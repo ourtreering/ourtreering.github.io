@@ -4,11 +4,11 @@ type: tech
 date: 2021-06-25 00:02
 category: CI/CD
 title: Github Action으로 자동화 배포 구현하기
-subtitle: Github Action과 K8s를 통해 CI/CD를 운영해보자!
+subtitle:  Github Action과 K8s를 통해 CI/CD를 운영해보자!
 writer: 970421
 post-header: true
 header-img: img/header.JPG
-hash-tag: [Github_Action, K8s, Docker, CI/CD]
+hash-tag: [Github_Action, K8s, Docker, CI_CD]
 ---
 
 안녕하세요. 26층 개발자들의 리드 낭만개발자 조현우입니다. 오늘은 실록 서비스를 개발하는 과정 중에서 효율적인 CI/CD를 구축하기 위해 삽질한 과정을 설명드리도록 하겠습니다. 처음이라 많이 모자라니 많은 피드백 부탁드립니다.
