@@ -6,6 +6,30 @@ title: 개발팀 소개
 
 <div class="loading-animation">
     <div class="about">
+    <div class="section">
+            <div class="title list">트리링 개발자 소개</div>
+            <div class="content">
+                <ul>
+                    {% assign members = site.data.members | sort: 'id' | where_exp: 'member', 'member.id != 834001' %}
+                    {% assign team = site.data.members | where: 'id', '834001' | concat: members %}
+                    {% for member in team %}
+                        <li class="member_card">
+                            <div class="thumbnail">
+                                {% assign thumbnail = site.static_files | where: 'basename', member.id | first %}
+                                <img class="profile" src="{{ thumbnail.path }}" />
+                                <div class="emoji">
+                                    <span>{{member.emoji}}</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name">{{member.name}}</div>
+                                <div class="description">{{member.comment}}</div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         <div class="section">
             <div class="title index">01</div>
             <div class="content">
@@ -34,30 +58,6 @@ title: 개발팀 소개
                     <li>개발팀 내부에서는 GitLab 이슈를 통해 업무에 대한 작업 내역을 관리합니다.</li>
                     <li>회사 내 커뮤니케이션은 Slack을 사용합니다.</li>
                     <li>문서는 위키를 사용해 작성합니다.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="section">
-            <div class="title list">개발자 소개</div>
-            <div class="content">
-                <ul>
-                    {% assign members = site.data.members | sort: 'id' | where_exp: 'member', 'member.id != 834001' %}
-                    {% assign team = site.data.members | where: 'id', '834001' | concat: members %}
-                    {% for member in team %}
-                        <li class="member_card">
-                            <div class="thumbnail">
-                                {% assign thumbnail = site.static_files | where: 'basename', member.id | first %}
-                                <img class="profile" src="{{ thumbnail.path }}" />
-                                <div class="emoji">
-                                    <span>{{member.emoji}}</span>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <div class="name">{{member.name}}</div>
-                                <div class="description">{{member.comment}}</div>
-                            </div>
-                        </li>
-                    {% endfor %}
                 </ul>
             </div>
         </div>

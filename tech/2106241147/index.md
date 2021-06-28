@@ -32,7 +32,7 @@ Spring에는 Swagger와 같은 API 문서 작성 기능을 REST DOCS라는 이�
 
 테스트 코드를 작성해 봅시다.
 
-```
+~~~java
 .andDo(document("member/test", 
     responseFields(
         fieldWithPath("memberId").description("member unique id"),
@@ -42,7 +42,7 @@ Spring에는 Swagger와 같은 API 문서 작성 기능을 REST DOCS라는 이�
         fieldWithPath("uniqueCode").description("123")
     )
 )
-```
+~~~
 테스트 코드 검증을 `andExpect`를 통해 마쳤다면, 위와 같이 document안에 디렉토리 구조와 RestDocs로 표현할 필드를 작성합니다.
 
 여기서 DTO에 해당하는 모든 필드를 모두 작성해야 하며, 작성하지 않을 시 에러를 던지게 됩니다.

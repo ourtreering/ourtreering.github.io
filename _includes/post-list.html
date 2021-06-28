@@ -1,9 +1,4 @@
-<li class="catalogue-item list"
-    {% if page.hash-tag %}
-        {% for tag in page.hash-tag %}
-            data-{{ tag }}
-        {% endfor %}
-    {% endif %}>
+<li class="catalogue-item list">
     <a href="{{ page.url | prepend: site.baseurl }}" >
         {% if page.portfolio == true %}
         <img src="{{ page.main-img }}" class="catalogue-img"/>
