@@ -53,9 +53,8 @@ title: 개발팀 소개
             <div class="content">
                 <h1 class="subtitle">개발환경</h1>
                 <ul class="environment">
-                    <li>소스는 내부 GitLab 저장소를 사용해 관리하고 있습니다.</li>
-                    <li>타팀과의 업무는 레드마인을 통해 관리/진행합니다.</li>
-                    <li>개발팀 내부에서는 GitLab 이슈를 통해 업무에 대한 작업 내역을 관리합니다.</li>
+                    <li>소스는 내부 GitHub 저장소를 사용해 관리하고 있습니다.</li>
+                    <li>개발팀 내부에서는GitHub 이슈를 통해 업무에 대한 작업 내역을 관리합니다.</li>
                     <li>회사 내 커뮤니케이션은 Slack을 사용합니다.</li>
                     <li>문서는 위키를 사용해 작성합니다.</li>
                 </ul>
