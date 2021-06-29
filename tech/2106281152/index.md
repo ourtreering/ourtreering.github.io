@@ -7,7 +7,7 @@ title: 2021 예비창업패키지 선정되다
 subtitle:  트리링 팀이 예비창업패키지 특화부문에 선정되었어요!
 writer: 980424
 post-header: true
-header-img: img/2106281.jpg
+header-img: img/logo.jpg
 hash-tag: [story]
 ---
 
@@ -33,7 +33,7 @@ hash-tag: [story]
 
 
 ### 모두를 신나게 한 메일
-<br><img src="img/합격사진.jpg" style="zoom:50%; display: center;">
+<br><img src="img/21062812.jpg" style="zoom:50%; display: center;">
 
 이 날도 평소와 같이 밤늦게까지 개발과 사업계획서를 작성하고 있었던 날이었어요.<br>
 팀원들과 마무리하고 가는 길에 이 메일을 받게 되었는데 모두 기뻐서 피로가 날아가는 경험을 했습니다. 
