@@ -2,7 +2,7 @@
 layout: post
 type: tech
 date: 2021-08-16 07:28
-category: 기획
+category: 아키텍쳐 설계
 title: 다 스토리가 있다구~ Model 1, 2 아키텍쳐와 MVC!
 subtitle: JSP model 1, 2 아키텍쳐 MVC 프레임워크 개발
 writer: 980424
